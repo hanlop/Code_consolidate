@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Code management\\Git Hub\\Code_consolidate\\Project1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{44B5EE15-4E84-401A-B960-E2C28479402D}|Project1\\Project1.vcxproj|D:\\Code management\\Git Hub\\Code_consolidate\\Project1\\Project1\\\u6E90.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{44B5EE15-4E84-401A-B960-E2C28479402D}|Project1\\Project1.vcxproj|solutionrelative:Project1\\\u6E90.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "\u6E90.cpp",
+              "DocumentMoniker": "D:\\Code management\\Git Hub\\Code_consolidate\\Project1\\Project1\\\u6E90.cpp",
+              "RelativeDocumentMoniker": "Project1\\\u6E90.cpp",
+              "ToolTip": "D:\\Code management\\Git Hub\\Code_consolidate\\Project1\\Project1\\\u6E90.cpp",
+              "RelativeToolTip": "Project1\\\u6E90.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-03-31T13:54:00.273Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
