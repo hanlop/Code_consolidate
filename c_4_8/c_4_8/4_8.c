@@ -112,31 +112,68 @@
 //求两数的最大公约数
 //使用更相减损法
 
-int gcd(int x, int y)
-{
-	while (1)
-	{
-		if (x > y)
-		{
-			x = x - y;
-		}
-		else if (x < y)
-		{
-			y = y - x;
-		}
-		else
-		{
-			return x;
-		}
-	}
-}
-
+//int gcd(int x, int y)
+//{
+//	while (1)
+//	{
+//		if (x > y)
+//		{
+//			x = x - y;
+//		}
+//		else if (x < y)
+//		{
+//			y = y - x;
+//		}
+//		else
+//		{
+//			return x;
+//		}
+//	}
+//}
+//
+//int main()
+//{
+//	int a = 0, b = 0;
+//	scanf("%d%d", &a, &b);
+//
+//	printf("%d和%d的公约数：%d", a, b, gcd(a, b));
+//
+//	return 0;
+//}
 int main()
 {
-	int a = 0, b = 0;
-	scanf("%d%d", &a, &b);
+    int num = 0;//输入所需的三角形个数
+    printf("输入三角形个数：\n");
+    scanf("%d", &num);
+    int arr[6] = { 0,0,0 };
+    printf("输入三角形的各个边长：\n");
+  
+    for (int i = 0; i < 3 * num; i++)//三条边长总数
+    {
+        scanf("%d", &arr[i]);
+    }
 
-	printf("%d和%d的公约数：%d", a, b, gcd(a, b));
-
-	return 0;
+    for (int i = 0; i < 3 * num; i += 3)//每次加三代表进入下一个三角形的判断
+    {
+        if (arr[i] + arr[i + 1] > arr[i + 2] && arr[i] - arr[i + 1] < arr[i + 2])
+        {
+            if (arr[i] == arr[i + 1] && arr[i + 1] == arr[i + 2])
+            {
+                printf("Equilateral triangle!\n");
+            }
+            else if (arr[i] != arr[i + 1] && arr[i] != arr[i + 2] && arr[i + 1] != arr[i + 2])
+            {
+                printf("Ordinary triangle!\n");
+            }
+            else
+            {
+                printf("Isosceles triangle!\n");
+            }
+        }
+        else
+        {
+            printf("Not a triangle!\n");
+        }
+    }
+    return 0;
 }
