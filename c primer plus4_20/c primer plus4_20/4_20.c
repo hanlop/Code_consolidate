@@ -143,7 +143,7 @@ int main()
 	scanf("%f %f", &galon, &mile);
 	printf("gallon/mile: %.1f\n",galon/mile);
 
-	printf("liter/kilometer: %.1f\n", galon * GALLON / mile * MILE * 100);
+	printf("liter/kilometer: %.1f\n", (galon * GALLON) / (mile * MILE * 100));
 	
 
 	return 0;
