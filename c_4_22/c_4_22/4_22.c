@@ -31,33 +31,88 @@
 
 //水仙花数
 #include <math.h>
+//int main()
+//{
+//	int i = 0;
+//
+//	for (i = 0; i <= 100000; i++)
+//	{
+//		int temp1 = i;//用来计算有多少位的临时变量
+//		int sum = 0;
+//		int cout = 0;//计算该数有几位
+//		int temp2 = i;//用来计算和的临时变量
+//		while (temp1)
+//		{
+//			cout++;
+//			temp1 /= 10;
+//		}
+//
+//		while (temp2)
+//		{
+//			sum += pow((temp2 % 10),cout);
+//			temp2 = temp2 / 10;
+//		}
+//
+//		if (sum == i)
+//		{
+//			printf("%d ", sum);
+//		}
+//	}
+//
+//	return 0;
+//}
+
+//int main()
+//{
+//	int n = 0;
+//	scanf("%d", &n);
+//
+//	int num = 0;
+//	int i = 0;
+//	int sum = 0;
+//	for (i = 0; i < 5; i++)
+//	{
+//		num =num*10+n;
+//		sum += num;
+//	}
+//
+//	printf("%d", sum);
+//
+//	return 0;
+//}
+
 int main()
 {
+	int n = 7;
 	int i = 0;
 
-	for (i = 0; i <= 100000; i++)
+	for (i = 0; i < 7; i++)
 	{
-		int temp1 = i;//用来计算有多少位的临时变量
-		int sum = 0;
-		int cout = 0;//计算该数有几位
-		int temp2 = i;//用来计算和的临时变量
-		while (temp1)
+		int j = 0;
+		for (j = 0; j < n - i; j++)
 		{
-			cout++;
-			temp1 /= 10;
+			printf(" ");
 		}
-
-		while (temp2)
+		for (j = 0; j < 2 * i + 1; j++)
 		{
-			sum += pow((temp2 % 10),cout);
-			temp2 = temp2 / 10;
+			printf("*");
 		}
-
-		if (sum == i)
-		{
-			printf("%d ", sum);
-		}
+		printf("\n");
 	}
 
+	for (i = 1; i < 7; i++)
+	{
+		int j = 0;
+		for (j = 0; j <= i; j++)
+		{
+			printf(" ");
+		}
+		for (j = 0; j < 2*n-(2*i+1); j++)
+		{
+			printf("*");
+		}
+
+		printf("\n");
+	}
 	return 0;
 }
