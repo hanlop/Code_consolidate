@@ -121,3 +121,77 @@
 //
 //	return 0;
 //}
+
+//打印整数二进制的奇数位和偶数位
+
+//void reverse(int arr[], int left, int right)
+//{
+//	while (left < right)
+//	{
+//		int tem = 0;
+//		tem = arr[left];
+//		arr[left] = arr[right];
+//		arr[right] = tem;
+//		left++;
+//		right--;
+//	}
+//}
+//void Print(int n)
+//{
+//	int uneven[16] = { 0 };
+//	int even[16] = { 0 };
+//
+//	int i = 0;
+//	int n1 = 0;
+//	int n2 = 0;
+//	for (i = 0; i < 32; i++)
+//	{
+//		if (i % 2 == 0)
+//			uneven[n1++] = (1 & (n >> i));
+//		else
+//			even[n2++] = (1 & (n >> i));
+//	}
+//
+//
+//	reverse(uneven,0,15);
+//	reverse(even, 0, 15);
+//
+//
+//	printf("奇数序列:");
+//	for (i = 0; i < 16; i++)
+//	{
+//		printf("%d", uneven[i]);
+//	}
+//
+//	printf("\n");
+//
+//	printf("偶数序列:");
+//	for (i = 0; i < 16; i++)
+//	{
+//		printf("%d", even[i]);
+//	}
+//}
+
+void Printbit(int num)
+{
+	for (int i = 31; i >= 1; i -= 2)
+	{
+		printf("%d ", (num >> i) & 1);
+	}
+	printf("\n");
+
+	for (int i = 30; i >= 0; i -= 2)
+	{
+		printf("%d ", (num >> i) & 1);
+	}
+	printf("\n");
+}
+int main()
+{
+	int n = 0;
+	scanf("%d", &n);
+
+	Printbit(n);
+
+	return 0;
+}
