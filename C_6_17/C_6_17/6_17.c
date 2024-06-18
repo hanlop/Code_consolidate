@@ -36,10 +36,43 @@
 //
 //malloc、calloc、realloc、free
 
+#include <stdlib.h>
+int main()
+{
+	//不会初始化成零
+	int* arr = (int*)malloc(sizeof(int) * 10);
+	int i = 0;
+	for (i = 0; i < 10; i++)
+	{
+		printf("%d ", arr[i]);
+	}
 
-//int main()
-//{
-//
-//
-//	return 0;
-//}
+	printf("\n");
+
+	//初始化成零
+	int* arr1 = (int*)calloc(10, sizeof(int));
+	for (i = 0; i < 10; i++)
+	{
+		printf("%d ", arr1[i]);
+	}
+	printf("\n");
+
+	//前面保留的部分还是零，扩展的内存不会初始化
+	int* temp = (int*)realloc(arr1, sizeof(int) * 20);
+	if (temp != NULL)
+	{
+		arr1 = temp;
+	}
+
+	for (i = 0; i < 20; i++)
+	{
+		printf("%d ", arr1[i]);
+	}
+
+	//释放内存，防止内存泄露
+	free(arr);
+	free(arr1);
+
+
+	return 0;
+}
