@@ -1,0 +1,12 @@
+Reposition stream position indicator
+Sets the position indicator associated with the stream to a new position.
+
+For streams open in binary mode, the new position is defined by adding offset to a reference position specified by origin.
+
+For streams open in text mode, offset shall either be zero or a value returned by a previous call to ftell, and origin shall necessarily be SEEK_SET.
+
+If the function is called with other values for these arguments, support depends on the particular system and library implementation (non-portable).
+
+The end-of-file internal indicator of the stream is cleared after a successful call to this function, and all effects from previous calls to ungetc on this stream are dropped.
+
+On streams open for update (read+write), a call to fseek allows to switch between reading and writing.
